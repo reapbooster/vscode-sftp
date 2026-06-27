@@ -1,58 +1,35 @@
-# sftp sync extension for VS Code
+# SFTP Sync Extension for VS Code
 
-New maintained and updated version by [@Natizyskunk](https://github.com/Natizyskunk/) 😀 <!-- and [@satiromarra](https://github.com/satiromarra) --> <br>
-(Forked from the no longer maintained [liximomo's SFTP plugin](https://github.com/liximomo/vscode-sftp.git))
+This is an actively maintained version of the no longer maintained Natizyskunk / liximomo SFTP extension. 
 
-- VS Code marketplace : https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp <br>
-- VSIX release : https://github.com/Natizyskunk/vscode-sftp/releases/
+This is a fast, robust, and feature-rich SFTP/FTP sync extension for VSCode. This is a maintained fork updated for compatibility with the latest versions of VS Code (fixing the `isDate is not valid` runtime errors and resolving other modern Node.js/Jest dependencies).
 
-✳ I would be more than happy to have you participate in one way or another to this project. You can do so by simply following the [templates](https://github.com/Natizyskunk/vscode-sftp/issues/new/choose) when you open a new issue or a new pull request.
-
-## ℹ INFOS - 2025/03/13
-I've tried to keep this extension up-to-date as much as I can and added a lot of new relevant features. Saddly, for the last year and a half I wasn't really able to work on the project because of personal reasons and I'm really not sure if and when I'll be able to get more time to work on it again. So for now consider the [v1.16.3](https://github.com/Natizyskunk/vscode-sftp/releases/tag/v1.16.3) as the latest official stable release available.
-
-## ℹ INFOS - 2023/06/23
-This is the main repository for the SFTP extension since [@liximomo](https://github.com/liximomo) has set his own to deprecated in favor of this one in the VSCode marketplace.
-There are also other forks that are available. Feel free to try them.
-
-A lot of work as been brought to fix bugs, add new features and more than 50 updates have been released with a lot of improvements and stability fixes for almost two years now. 😎
-
-I've been working hard to fix a lot of things and I've updated more than 50 new releases with a lot of improvements and stability fixes and I've brought new features for almost three years now. 
+- **VS Code Marketplace**: [responsivewebio.vscode-sftp](https://marketplace.visualstudio.com/items?itemName=responsivewebio.vscode-sftp)
+- **GitHub Repository**: [reapbooster/vscode-sftp](https://github.com/reapbooster/vscode-sftp)
+- **VSIX Releases**: [Releases](https://github.com/reapbooster/vscode-sftp/releases)
 
 ---
 
-VSCode-SFTP enables you to add, edit or delete files within a local directory and have it sync to a remote server directory using different transfer protocols like FTP or SSH. The most basic setup requires only a few lines of configuration with a wide array of specific settings also available to meet the needs of any user. Both powerful and fast, it helps developers save time by allowing the use of a familiar editor and environment.
-
-- Features
-  - [Browser remote with Remote Explorer](#remote-explorer)
-  - Diff local and remote
-  - Sync directory
-  - Upload/Download
-  - Upload on save
-  - File Watcher
-  - Multiple configurations
-  - Switchable profiles
-  - Temp File support
-- [Commands](https://github.com/Natizyskunk/vscode-sftp/wiki/Commands)
-- [Debug](#debug)
-- [FAQ](#FAQ)
+## Features
+- **Remote Explorer**: Browse and manage remote files directly from the VS Code sidebar.
+- **Bi-directional Sync**: Sync local directory to remote, remote to local, or both directions.
+- **Upload/Download**: Fast transfer of files and folders via keyboard shortcuts or context menus.
+- **Upload on Save**: Automatically upload modified files when saved.
+- **Diff Comparison**: View diffs between local and remote files.
+- **Profiles**: Easily switch between development, staging, and production server profiles.
+- **Connection Hopping**: Securely connect to target servers via single or multiple SSH hops (proxies).
 
 ## Installation
 
-### Method 1 (Recommended : Auto update)
-1. Select Extensions (Ctrl + Shift + X).
-2. Uninstall current sftp extension from @liximomo.
-3. Install new extension directly from VS Code Marketplace : https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp.
-4. Voilà!
+### Method 1: Extension Marketplace (Recommended)
+1. Open VS Code and open the Extensions pane (`Ctrl+Shift+X` or `Cmd+Shift+X` on macOS).
+2. Search for **`SFTP-2026`**, find the one by responsiveweb.io and click **Install**.
 
-### Method 2 (Manual update)
-To install just follow these steps from within VSCode:
-1. Select Extensions (Ctrl + Shift + X).
-2. Uninstall current sftp extension from @liximomo.
-3. Open "More Action" menu(ellipsis on the top) and click "Install from VSIX…".
-4. Locate VSIX file and select.
-5. Reload VSCode.
-6. Voilà!
+### Method 2: Manual Installation via VSIX
+1. Download the latest `.vsix` file from the [Releases](https://github.com/reapbooster/vscode-sftp/releases) page.
+2. In VS Code, open the Extensions pane.
+3. Click the `...` menu in the top-right and select **Install from VSIX...**.
+4. Select the downloaded `.vsix` file.
 
 ## Documentation
 - [Home](https://github.com/Natizyskunk/vscode-sftp/wiki)
@@ -100,28 +77,13 @@ For detailed explanations please go to [wiki](https://github.com/Natizyskunk/vsc
 ## Example configurations
 You can see the full list of configuration options [here](https://github.com/Natizyskunk/vscode-sftp/wiki/configuration).
 
-- [sftp sync extension for VS Code](#sftp-sync-extension-for-vs-code)
-  - [Installation](#installation)
-    - [Method 1 (Recommended : Auto update)](#method-1-recommended--auto-update)
-    - [Method 2 (Manual update)](#method-2-manual-update)
-  - [Documentation](#documentation)
-  - [Usage](#usage)
-  - [Example configurations](#example-configurations)
-    - [Simple](#simple)
-    - [Profiles](#profiles)
-    - [Multiple Context](#multiple-context)
-    - [Connection Hopping](#connection-hopping)
-      - [Single Hop](#single-hop)
-      - [Multiple Hop](#multiple-hop)
-    - [Configuration in User Setting](#configuration-in-user-setting)
-  - [Remote Explorer](#remote-explorer)
-    - [Multiple Select](#multiple-select)
-    - [Order](#order)
-  - [Debug](#debug)
-  - [FAQ](#faq)
-  - [Donation](#donation)
-    - [Buy Me a Coffee](#buy-me-a-coffee)
-    - [PayPal](#paypal)
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Usage](#usage)
+- [Example configurations](#example-configurations)
+- [Remote Explorer](#remote-explorer)
+- [Debug](#debug)
+- [FAQ](#faq)
 
 ### Simple
 ```json
@@ -276,7 +238,7 @@ In sftp.json:
 ```
 
 ## Remote Explorer
-![remote-explorer-preview](https://raw.githubusercontent.com/Natizyskunk/vscode-sftp/master/assets/showcase/remote-explorer.png)
+![remote-explorer-preview](https://raw.githubusercontent.com/reapbooster/vscode-sftp/master/assets/showcase/remote-explorer.png)
 
 Remote Explorer lets you explore files in remote. You can open Remote Explorer by:
 
@@ -312,13 +274,3 @@ In sftp.json:
 ## FAQ
 You can see all the Frequently Asked Questions [here](./FAQ.md).
 
-## Donation
-If this project helped you reduce development time and you wish to contribute financially
-
-### Buy Me a Coffee
-[![Buy Me A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png)](https://www.buymeacoffee.com/Natizyskunk)
-
-### PayPal
-<!-- [![PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BY89QD47D7MPS&source=url) -->
-[![PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/donate?business=DELD7APHHM3BC&no_recurring=0&currency_code=EUR)
-[![PayPal Me](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/natanfourie)
