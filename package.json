@@ -2,7 +2,7 @@
   "name": "vscode-sftp-2026",
   "displayName": "SFTP-2026",
   "description": "SFTP/FTP sync",
-  "version": "1.16.4",
+  "version": "1.16.5",
   "publisher": "responsivewebio",
   "author": "Jose Ramirez <webmaster@reapbooster.com> (https://github.com/reapbooster)",
   "contributors": [
