@@ -4,7 +4,7 @@ This is an actively maintained version of the no longer maintained Natizyskunk /
 
 This is a fast, robust, and feature-rich SFTP/FTP sync extension for VSCode. This is a maintained fork updated for compatibility with the latest versions of VS Code (fixing the `isDate is not valid` runtime errors and resolving other modern Node.js/Jest dependencies).
 
-- **VS Code Marketplace**: [responsivewebio.vscode-sftp](https://marketplace.visualstudio.com/items?itemName=responsivewebio.vscode-sftp)
+- **VS Code Marketplace**: [responsivewebio.vscode-sftp-2026](https://marketplace.visualstudio.com/items?itemName=responsivewebio.vscode-sftp-2026)
 - **GitHub Repository**: [reapbooster/vscode-sftp](https://github.com/reapbooster/vscode-sftp)
 - **VSIX Releases**: [Releases](https://github.com/reapbooster/vscode-sftp/releases)
 
